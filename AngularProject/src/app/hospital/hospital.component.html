@@ -1,0 +1,56 @@
+<nav class="navbar navbar-light bg-success">
+    <div class="container-fluid">
+        <h2 style="color: beige;">Hastane Sayfası</h2>
+        <div class="d-flex">
+            <button type="button" style="color: white;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Hastane EKLE</button>
+          
+        </div>
+        
+    </div>
+    </nav>
+    <table class="table nt-3">
+        <thead>
+            <tr>
+                <th scope="col">Hastane Adı &nbsp;</th>
+                <th scope="col">Hastane Adresi&nbsp;</th>
+                <th scope="col">Kişi Soyadı &nbsp;</th>
+       
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of  hospitaldata">
+             <td>{{row.hospitalname}}</td>
+             <td>{{row.hospitaladress}}</td>
+            </tr>
+            </tbody>
+    </table>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Hastane Bilgileri</h5>
+            
+            
+          </div>
+          <div class="modal-body">
+            <form [FormGroup]="formvalues">
+      <div class="mb-3">
+        <label for="exampleInputEmail1">Hastane Ad</label>
+        <input type="text" class="form-control" formControlName="hospitalname" id="exampleInputEmail1" required aria-describedby="emailHelp" placeholder="Hastane Adını Girin">
+      </div>
+      <div class="mb-3 form-group">
+        <label for="exampleInputPassword1">Hastane Adresi</label>
+        <input type="text" class="form-control" formControlName="hospitaladress" id="exampleInputPassword1" placeholder="Hastane Adres">
+      </div>
+    
+    </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button"  id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">ÇIKIŞ</button>
+            <button type="button"  (click)="postHospitalDetay()"  class="btn btn-secondary">KAYDET</button>
+          </div>
+        </div>
+      </div>
+    </div>
