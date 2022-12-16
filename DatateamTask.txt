@@ -1,0 +1,45 @@
+Task :
+
+- .net core ve herhangi bir db'de entity framework kullanarak doktor, hastane ve doktorların çalıştığı hastane kayıtlarının yapılacağı ekranlar yapmanı istiyoruz. 
+- Client tarafı için önceliğimiz vuejs olacaktır ama tercih ettiğin bir javascript framework'ü ve istediğin kütüphaneleri de kullanabilirsin. Kodu github’a yükleyerek ya da zipleyerek bize iletebilirsin. 
+- Bir doktor birden fazla hastanede çalışabilir. Kaydedilen nesnelerin listelemesi de olacak tabii. Kabaca şöyle ekranlar düşünebilirsin;
+
+ 
+
+Ekran 1:
+  Doktor Kayıt:
+  Ad:
+  Soyad:
+  TC:
+
+ 
+
+ Kayıtlı doktor listesi
+
+Ekran 2:
+  Hastane Kayıt:
+  Hastane Adı:
+  Adres :
+
+ Kayıtlı hastane listesi
+
+ 
+
+Ekran 3:
+ Doktor-hastane :
+
+  Doktor TC doldurumalı
+
+  Hastane: (combobox'tan seçim, multiple seçilebilir)
+
+ 
+
+Kayıtlı doktor-hastane listesi (Filtre eklenecek, Hastane filtresi olacak yine combobox'tan seçmeli, bir de isimden doktor arama seçeneği olacak)
+
+  Hastane Filtre :
+
+  Doktor Filtre:
+
+  Filtrele Butonu
+
+ 
